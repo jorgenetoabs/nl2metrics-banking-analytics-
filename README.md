@@ -1,5 +1,3 @@
-### nl2metrics-banking-analytics-
-
 ## NL2Metrics: Pipeline de Intelligence Analytics para Feedback Bancário
 
 ## Visão Geral do Solução
