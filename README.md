@@ -1,6 +1,6 @@
 ## NL2Metrics: Pipeline de Intelligence Analytics para Feedback Bancário
 
-## Visão Geral do Solução
+## Visão Geral da Solução
 Este projeto implementa um pipeline de dados baseado em LLM (Large Language Model) para transformar feedbacks não estruturados de clientes bancários em métricas acionáveis (NL2Metrics). A solução aplica o framework **ABSA (Aspect-Based Sentiment Analysis)**, garantindo conformidade rigorosa com **LGPD / BACEN** através de sanitização automatizada de PII.
 
 ---
@@ -21,4 +21,6 @@ Este projeto implementa um pipeline de dados baseado em LLM (Large Language Mode
 ---
 
 ## Arquivos do Repositório
-- [`system_prompt.md`](./system_prompt.md): Prompt de Engenharia completo com System Instructions, Contratos de Dados e Exemplos Few-Shot.
+- [`system_prompt.md`](./system_prompt.md): System Prompt de Engenharia com instruções do modelo, taxonomia ABSA e exemplos Few-Shot.
+- [`schema_bronze.json`](./schema_bronze.json): Contrato e validador de dados da camada de entrada (Bronze).
+- [`schema_silver.json`](./schema_silver.json): Contrato e validador de dados da camada de saída (Silver).
