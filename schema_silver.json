@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ContratoDeSaidaSilverABSA",
+  "type": "object",
+  "required": [
+    "id_feedback",
+    "texto_sanitizado",
+    "pii_detectado",
+    "parsing_absa",
+    "justificativa_classificacao"
+  ],
+  "properties": {
+    "id_feedback": {
+      "type": "string",
+      "description": "Identificador único do feedback vindo da camada Bronze."
+    },
+    "texto_sanitizado": {
+      "type": "string",
+      "description": "Texto do comentário com todas as PIIs devidamente mascaradas."
+    },
+    "pii_detectado": {
+      "type": "boolean",
+      "description": "Flag indicando se houve remoção de dados pessoais sensíveis."
+    },
+    "parsing_absa": {
+      "type": "object",
+      "required": [
+        "nivel_1_funcionalidade",
+        "nivel_2_experiencia",
+        "nivel_3_polaridade",
+        "nivel_3_urgencia_peso"
+      ],
+      "properties": {
+        "nivel_1_funcionalidade": {
+          "type": "string",
+          "enum": [
+            "Pix (Transferência)",
+            "Pix (Copia e Cola / QR Code)",
+            "App Mobile (Login / Autenticação)",
+            "Cartão de Crédito / Débito",
+            "Saldo e Extrato",
+            "Atendimento / SAC",
+            "Geral / Não Especificado"
+          ]
+        },
+        "nivel_2_experiencia": {
+          "type": "string",
+          "enum": [
+            "Desempenho Técnico (SRE)",
+            "Usabilidade / UX",
+            "Processo / Política de Negócio",
+            "Atendimento Humano",
+            "Geral / Não Especificado"
+          ]
+        },
+        "nivel_3_polaridade": {
+          "type": "string",
+          "enum": [
+            "Positivo",
+            "Neutro",
+            "Negativo Moderado",
+            "Negativo Crítico",
+            "Indeterminado"
+          ]
+        },
+        "nivel_3_urgencia_peso": {
+          "type": "integer",
+          "enum": [0, 1, 2, 3, 4]
+        }
+      },
+      "additionalProperties": false
+    },
+    "justificativa_classificacao": {
+      "type": "string",
+      "description": "Breve justificativa gerada pela IA para explicar a classificação."
+    }
+  },
+  "additionalProperties": false
+}
