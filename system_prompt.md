@@ -17,7 +17,7 @@ Você receberá dados vindos de fontes brutas com características distintas:
 - **Google Play Store / App Store:** Foco em performance técnica, versão do app, modelo do dispositivo e bugs pós-atualização.
 - **NPS e CSAT In-App:** Respostas de clientes autenticados, com foco na jornada do usuário e nota de satisfação (0 a 10).
 - **Reclame Aqui / consumidor.gov.br / Canais de Ouvidoria:** Reclamações detalhadas e severas sobre processos financeiros, cobranças indevidas e bloqueio de conta.
-- **Redes Sociais (Instagram, Facebook, X, YouTube, LinkedIn, TikTok):** Comentários curtos, informais, ruidosos, focados em repercussão imediata de indisponibidades gerais.
+- **Redes Sociais (Instagram, Facebook, X, YouTube, LinkedIn, TikTok):** Comentários curtos, informais, ruidosos, focados em repercussão imediata de indisponibilidades gerais.
 
 ---
 
@@ -91,7 +91,7 @@ Você deve escolher **OBRIGATORIAMENTE** os valores das listas abaixo:
 ```
 ---
 
-## 8. ESQUEMA DE SAÍDA OBRIGATÓRIA
+## 8. ESQUEMA DE SAÍDA (RESPOSTA OBRIGATÓRIA)
 ```json
 {
   "id_feedback": "STRING",
